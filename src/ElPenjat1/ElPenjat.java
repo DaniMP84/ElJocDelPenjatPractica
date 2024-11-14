@@ -12,7 +12,14 @@ public class ElPenjat {
 		char letra;
 		
 		
-		
+		System.out.println("¿Que palabra eliges?");
+		palabra = entrada.nextLine();
+		System.out.println("¿Cuantos jugadores habrá?");
+		jugadores = entrada.nextInt();
+		System.out.println("¿Cuantas rondas jugaréis?");
+		rondas = entrada.nextInt();
+		System.out.println("Elige una letra");
+		letra = entrada.next().charAt(0);
 		
 		
 		
