@@ -10,7 +10,8 @@ public class ElPenjat {
 		int jugadores;
 		int rondas;
 		char letra;
-		
+		String[] palabrasParaElegir = {"Casa", "Lobo", "Caramelo", "Papel", "Perro", "Gato", "Ordenador", "Castaña",
+				"Pantano", "Rock"};
 		
 		System.out.println("¿Que palabra eliges?");
 		palabra = entrada.nextLine();
