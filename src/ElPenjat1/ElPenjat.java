@@ -8,11 +8,12 @@ public class ElPenjat {
 		
 		//Scanner y variables a usar + array.
 		Scanner entrada = new Scanner(System.in);
-		String palabra;
+		
 		int jugadores;
 		int rondas;
 		char letra;
-		String[] palabrasParaEelegir = {"Casa", "Lobo", "Caramelo", "Papel", "Perro", "Gato", "Ordenador", "Castaña",
+		//Estas son las palabras disponibles
+		String[] palabrasParaElegir = {"Casa", "Lobo", "Caramelo", "Papel", "Perro", "Gato", "Ordenador", "Castaña",
 				"Pantano", "Rock"};
 		
 		
@@ -22,8 +23,13 @@ public class ElPenjat {
 		System.out.println("***************************************************************");
 		System.out.println("");
 		System.out.println("");
-		System.out.println("¿Que palabra eliges?");
-		palabra = entrada.nextLine();
+		//Pregunto que palabra quiere y le aclaro que debe elegir un numero del indice para que no haya confusiones
+		System.out.println("¿Que palabra eliges? Seleciona un número del indice");
+		for(int i = 0; i < palabrasParaElegir.length;i++) {
+			System.out.println(i + ": " + palabrasParaElegir[i]);		
+		}
+		int indicePalabra = entrada.nextInt();
+		String PalabraSecreta = palabrasParaElegir[indicePalabra].toLowerCase();
 		System.out.println("¿Cuantos jugadores habrá?");
 		jugadores = entrada.nextInt();
 		System.out.println("¿Cuantas rondas jugaréis?");
@@ -32,10 +38,7 @@ public class ElPenjat {
 		letra = entrada.next().charAt(0);
 		
 		
-		for(int i = 0; i < rondas;i++){
-			if (letra == palabrasParaEelegir[0]){
-			System.out.println(i);	
-			}i++;
+		
 			
 			
 		}
