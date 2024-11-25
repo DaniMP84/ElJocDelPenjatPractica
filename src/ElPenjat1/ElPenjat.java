@@ -8,7 +8,7 @@ public class ElPenjat {
 		
 		//Scanner y variables a usar + array.
 		Scanner entrada = new Scanner(System.in);
-		
+		int indicePalabra;
 		int jugadores;
 		int rondas;
 		char letra;
@@ -23,20 +23,29 @@ public class ElPenjat {
 		System.out.println("***************************************************************");
 		System.out.println("");
 		System.out.println("");
+		
 		//Pregunto que palabra quiere y le aclaro que debe elegir un numero del indice para que no haya confusiones
 		System.out.println("¿Que palabra eliges? Seleciona un número del indice");
+		//Solicito que elija una palabra y la guardo en palabraSecreta.
 		for(int i = 0; i < palabrasParaElegir.length;i++) {
 			System.out.println(i + ": " + palabrasParaElegir[i]);		
-		}
-		int indicePalabra = entrada.nextInt();
+		}		
+		indicePalabra = entrada.nextInt();
 		String PalabraSecreta = palabrasParaElegir[indicePalabra].toLowerCase();
-		System.out.println("¿Cuantos jugadores habrá?");
-		jugadores = entrada.nextInt();
-		System.out.println("¿Cuantas rondas jugaréis?");
-		rondas = entrada.nextInt();
-		System.out.println("Elige una letra");
-		letra = entrada.next().charAt(0);
 		
+		/*Solicito número de jugadores y le añado un error en caso de no elegir el mínimo que son 2 con el bucle while, mientras elija menos de 2 saldra el mensaje d error
+		guardo la respuesta en la variable jugadores.*/
+		System.out.println("¿Cuantos jugadores habrá? Debes elegir mínimo 2 jugadores");
+		jugadores = entrada.nextInt();
+		while(jugadores < 2) {
+			System.out.println("Error: Tienes que elegir al menos 2 jugadores");		
+			jugadores = entrada.nextInt();
+		}
+		
+		System.out.println("¿Cuantas rondas jugaréis?");
+
+		System.out.println("Elige una letra");
+
 		
 		
 			
