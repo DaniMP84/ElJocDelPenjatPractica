@@ -19,7 +19,7 @@ public class ElPenjat {
 		
 		//Bienvenida y pciones para el usuario.
 		System.out.println("***************************************************************");
-		System.out.println("*Benvingut Al Joc Del Penjat*");
+		System.out.println("*Benvenido al juego Del Colgado*");
 		System.out.println("***************************************************************");
 		System.out.println("");
 		System.out.println("");
