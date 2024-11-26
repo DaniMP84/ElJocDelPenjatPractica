@@ -70,6 +70,21 @@ public class ElPenjat {
 		
 		
 		
+		//Inicio del bucle del juego.
+		for(int ronda = 1; ronda <= rondas; ronda++) {
+			System.out.println("/n Comienza la ronda" + ronda);
+		}
+		
+		//Turno de cada jugador y intentos restantes.
+		for(int i = 0; i < jugadores; i++) {
+			int intentosRestantes = 6;
+		}
+		
+		//Indicador para saber si el jugador adivina, se inicia con false al inicio de cada jugador porque al inicio no esta adivinada, si se adivina cambiara a ture.
+		boolean palabraAcertada = false;
+		
+		//concatenación de texto en la que muestro el nombre del jugador y el estado de la palabra secreta.
+		System.out.println("/n Turno de " + nombreJugadores[i] + " La palabra es: " + new String(estadoPalabra));
 			
 			
 		
