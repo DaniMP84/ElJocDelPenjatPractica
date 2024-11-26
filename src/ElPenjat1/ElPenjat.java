@@ -100,10 +100,22 @@ public class ElPenjat {
 		for(int j = 0; j < palabraSecreta.length(); j++) {
 			if(palabraSecreta.charAt(j) == letra && estadoPalabra[j] == '_') {
 			   estadoPalabra[i] = letra;
-			   acierto = true;
+			   acierto = true;		   
 		}
 	}
+		//Si no acierta simplemente se le resta un intento.El ! invierte el valor de acierto.
+		if(!acierto) {
+			intentosRestantes--;
+			//Si acierta se le da la enhorabuena nombrandolo
+		}else {
+			System.out.println("Enhorabuena " + nombreJugadores[i] + "has acertado una letra");
+			}
 		
+		
+		
+		}
+		}
+		}
 		
 		
 		
