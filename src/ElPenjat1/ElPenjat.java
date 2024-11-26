@@ -13,7 +13,7 @@ public class ElPenjat {
 		int rondas;
 		char letra;
 		//Estas son las palabras disponibles
-		String[] palabrasParaElegir = {"Casa", "Lobo", "Caramelo", "Papel", "Perro", "Gato", "Ordenador", "Castaña",
+		String[] palabrasParaElegir = {"Casa", "Lobo", "Taza", "Papel", "Perro", "Gato", "Juego", "Castaña",
 				"Pantano", "Rock"};
 		
 		
