@@ -72,7 +72,7 @@ public class ElPenjat {
 		
 		//Inicio del bucle del juego.
 		for(int ronda = 1; ronda <= rondas; ronda++) {
-			System.out.println("/n Comienza la ronda" + ronda);
+			System.out.println("\n Comienza la ronda" + ronda);
 		
 		
 		//Turno de cada jugador y intentos restantes.
@@ -84,11 +84,11 @@ public class ElPenjat {
 		boolean palabraAcertada = false;
 		
 		//concatenación de texto en la que muestro el nombre del jugador y el estado de la palabra secreta.
-		System.out.println("/n Turno de " + nombreJugadores[i] + " La palabra es: " + new String(estadoPalabra));
+		System.out.println("\n Turno de " + nombreJugadores[i] + " La palabra es: " + new String(estadoPalabra));
 		
 		
 		//Bucle que se repite mientras el jugador actual tenga intentos y no haya adivinado la palabra.
-		While(intentosRestantes > 0 && !palabraAcertada) {
+		while(intentosRestantes > 0 && !palabraAcertada) {
 			System.out.println("Tus intentos restantes son: " + intentosRestantes);
 			System.out.println(nombreJugadores[i] + ", introduce una letra");
 			letra = entrada.next().toLowerCase().charAt(0);
@@ -99,7 +99,7 @@ public class ElPenjat {
 		//Recorrer la palabra para comprobar si la letra introducida coincide.
 		for(int j = 0; j < palabraSecreta.length(); j++) {
 			if(palabraSecreta.charAt(j) == letra && estadoPalabra[j] == '_') {
-			   estadoPalabra[i] = letra;
+			   estadoPalabra[j] = letra;
 			   acierto = true;		   
 		}
 	}
@@ -108,25 +108,33 @@ public class ElPenjat {
 			intentosRestantes--;
 			//Si acierta se le da la enhorabuena nombrandolo
 		}else {
-			System.out.println("Enhorabuena " + nombreJugadores[i] + "has acertado una letra");
+			System.out.println("Enhorabuena " + nombreJugadores[i] + " has acertado una letra");
 			}
 		
 		
-		
+		//Comprueba si la palabra ha sido adivinada
+		if(new String(estadoPalabra).equals(palabraSecreta)) {
+			System.out.println(nombreJugadores[i] + " ha adivinado la palabra secreta!");
+			//Contador de vueltas ganadas para el jugador.
+			lasRondasGanadas[i]++;
+			//Cambia a true para indicar que ha adivinado.
+			palabraAcertada = true;
 		}
+			//Muestra el estado actual de la palabra secreta.
+			System.out.println("Estado actual: " + new String(estadoPalabra));
 		}
+		//Sale un mensaje de fin de turno si el jugador no ha adivinado la palabra secreta.
+		if(!palabraAcertada) {
+			System.out.println("Lo siento, " + nombreJugadores[i] + " Te has quedado sin más intentos."
+					+ "La palabra correcta era: " + palabraSecreta);
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
+		//Reinicia el estado de la palabra para la siguiente ronda si fuese necesario.
+		if(ronda < rondas) {
+			for(int k = 0; k < estadoPalabra.length;k++) {
+				estadoPalabra[k] = '_';
+			}
+		}
+	   }
+      }
+	 }
 	}
-
-}
