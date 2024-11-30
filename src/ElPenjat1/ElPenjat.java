@@ -136,5 +136,17 @@ public class ElPenjat {
 		}
 	   }
       }
+		//Resultado final
+		int maxRondasGanadas = 0;
+		String ganador = "";
+		for(int i = 0; i < jugadores;i++) {
+			if(lasRondasGanadas[i] > maxRondasGanadas) {
+				maxRondasGanadas = lasRondasGanadas[i];
+				ganador = nombreJugadores[i];
+			}
+			System.out.println(nombreJugadores[i] + " ha ganado" + lasRondasGanadas[i] + " rondas.");
+		}
+		System.out.println("\nEl ganador es: " + ganador + " con " + maxRondasGanadas + " rondas ganadas.");
+		
 	 }
 	}
