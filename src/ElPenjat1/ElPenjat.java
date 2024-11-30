@@ -72,7 +72,7 @@ public class ElPenjat {
 		
 		//Inicio del bucle del juego.
 		for(int ronda = 1; ronda <= rondas; ronda++) {
-			System.out.println("\n Comienza la ronda" + ronda);
+			System.out.println("\nComienza la ronda" + ronda);
 		
 		
 		//Turno de cada jugador y intentos restantes.
@@ -84,7 +84,7 @@ public class ElPenjat {
 		boolean palabraAcertada = false;
 		
 		//concatenación de texto en la que muestro el nombre del jugador y el estado de la palabra secreta.
-		System.out.println("\n Turno de " + nombreJugadores[i] + " La palabra es: " + new String(estadoPalabra));
+		System.out.println("\nTurno de " + nombreJugadores[i] + " La palabra es: " + new String(estadoPalabra));
 		
 		
 		//Bucle que se repite mientras el jugador actual tenga intentos y no haya adivinado la palabra.
@@ -108,7 +108,7 @@ public class ElPenjat {
 			intentosRestantes--;
 			//Si acierta se le da la enhorabuena nombrandolo
 		}else {
-			System.out.println("Enhorabuena " + nombreJugadores[i] + " has acertado una letra");
+			System.out.println("\nEnhorabuena " + nombreJugadores[i] + ", has acertado una letra");
 			}
 		
 		
@@ -121,11 +121,11 @@ public class ElPenjat {
 			palabraAcertada = true;
 		}
 			//Muestra el estado actual de la palabra secreta.
-			System.out.println("Estado actual: " + new String(estadoPalabra));
+			System.out.println("\nEstado actual: " + new String(estadoPalabra));
 		}
 		//Sale un mensaje de fin de turno si el jugador no ha adivinado la palabra secreta.
 		if(!palabraAcertada) {
-			System.out.println("Lo siento, " + nombreJugadores[i] + " Te has quedado sin más intentos."
+			System.out.println("\nLo siento, " + nombreJugadores[i] + " Te has quedado sin más intentos."
 					+ "La palabra correcta era: " + palabraSecreta);
 		}
 		//Reinicia el estado de la palabra para la siguiente ronda si fuese necesario.
@@ -144,9 +144,9 @@ public class ElPenjat {
 				maxRondasGanadas = lasRondasGanadas[i];
 				ganador = nombreJugadores[i];
 			}
-			System.out.println(nombreJugadores[i] + " ha ganado" + lasRondasGanadas[i] + " rondas.");
+			System.out.println("\n" + nombreJugadores[i] + " ha ganado" + lasRondasGanadas[i] + " rondas.");
 		}
-		System.out.println("\nEl ganador es: " + ganador + " con " + maxRondasGanadas + " rondas ganadas.");
+		System.out.println("\nEl ganador es: " + ganador + " con " + maxRondasGanadas + " ronda/as ganadas.");
 		
 	 }
 	}
